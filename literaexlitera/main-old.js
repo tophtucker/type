@@ -108,7 +108,7 @@ function StreakyText(message) {
       g.fillText(message, textOffsetLeft, textAscent);
     }
 
-    g.globalCompositeOperation = "darker";
+    g.globalCompositeOperation = "darken";
 
     for (var i = 0; i < particles.length; i++) {
       g.fillStyle = colors[i % colors.length];
