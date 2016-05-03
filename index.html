@@ -1,13 +1,95 @@
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title></title>
+<title>Experiments in Typography - Toph Tucker</title>
 
 <link rel="stylesheet" type="text/css" href="main.css"/>
 
 <body>
+
+  <h1>Experiments in typography</h1>
+  <h2><a href="http://tophtucker.com">Toph Tucker</a>, 2015–2016</h2>
+
+  <p>Inspired by something Tracy Ma did for <em>Businessweek</em>, I started playing with using the html canvas to do things with type.</p>
+
+  <iframe src="lenticular5/index.html" scrolling="no"></iframe>
+
+  <iframe src="lenticular4/index.html" scrolling="no"></iframe>
+
+  <iframe src="lenticular6/index.html" scrolling="no"></iframe>
     
+  <p>But so there’s this fun little JavaScript / canvas thing called <a href="https://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage">FizzyText</a> (<a href="https://github.com/dataarts/dat.gui/blob/gh-pages/docs/demo.js">source</a>), which appears to have been made by one George Michael Brower as a throwaway demonstration of his GUI tool. I found its key mechanism brilliant: reading image data from the canvas, plus some Perlin noise, to drive the behavior of particles. Here’s Fizzy Text:</p>
+
+  <iframe src="fizzytext/index.html" scrolling="no" style="width:550px;height:200px;"></iframe>
+
+  <p>The color particles grow when they're atop a black pixel in an invisible background canvas where "Fizzy Text" has been rendered, and gradually shrink to nonexistence on white pixels. It's a little more clear what's going on if we put a floor on particle size, though then they get trapped in attractor channels instead of randomly respawning: </p>
+
+  <iframe src="fizzytext2/index.html" scrolling="no" style="width:550px;height:200px;"></iframe>
+
+  <p>My first step was to strip out the noise and just the particles fall and leave trails only when they're over the background image, like rendering by bonding, like revealing it like invisible ink:
+
+  <iframe src="fizzytext3/index.html" scrolling="no" style="width:550px;height:200px;"></iframe>
+
+  <p>Next you can color the particles non-randomly, like picking up an invisible gradient:</p>
+
+  <iframe src="fizzytext5/index.html" scrolling="no" style="width:550px;height:200px;"></iframe>
+
+  <p>Or fill in the background with random colors, so the text stands out only by its coherence:</p>
+
+  <iframe src="fizzytext6/index.html" scrolling="no" style="width:550px;height:200px;"></iframe>
+
+  <p>Or try something more like the original FizzyText, but with a shifting Perlin noise field, so that particles get blown back and forth in gusts of wind, and the text assumes more or less coherence over time, and the text changes, so the particles fizz out or reconstitute into new letters:</p>
+
+  <iframe src="fizzytext10/index.html" scrolling="no" style="width:550px;height:200px;"></iframe>
+
+  <p>Or do something sillier, like rendering the underlying text in Steph Davidson's Curlz SD and then finding spots to draw more curls, to make it curlier, because it is not curly enough:</p>
+
+  <iframe src="fizzytext8/index.html" scrolling="no"></iframe>
+
+  <p>Variations on these techniques can also be used to do painting.</p>
+
+  <iframe src="particlepainter/index.html" scrolling="no"></iframe>
+
+  <p>Here the mouse paints with increasing fidelity.</p>
+
+  <iframe src="particlepainter2/index.html" scrolling="no"></iframe>
+
+  <p>Here’s a slideshow.</p>
+
+  <iframe src="particlepainter3/index.html" scrolling="no"></iframe>
+
+  <p>You can also use letters to make letters, <em>litera ex litera</em>. Roll over to reveal my favorite author! (Sorry for being so basic.)</p>
+
+  <iframe src="literaexlitera2/index.html" scrolling="no" style="height: 350px"></iframe>
+
+  <p>Roll over to reveal the man who gave this speech, and happens to be my employer!</p>
+
+  <iframe src="literaexlitera3/index.html" scrolling="no" style="height: 700px"></iframe>
+
+  <p>Roll over to hold it all together.</p>
+
+  <iframe src="literaexlitera4/index.html" scrolling="no"></iframe>
+
+  <p>Later I was chilling in a hot tub talking about Archimedes. How would he displace type?</p>
+
+  <iframe src="archimedeantext/index.html" scrolling="no"></iframe>
+
+  <p>This one scrolls.</p>
+
+  <iframe src="archimedeantext2/index.html" style="overflow:scroll"></iframe>
+
+  <p>This one is almost subtle.</p>
+
+  <iframe src="archimedeantext3/index.html" scrolling="no"></iframe>
+
+  <p>We used some of these concepts as an opener on <a href="http://www.bloomberg.com/features/2016-microsoft-research/">a Microsoft feature</a> (in which letters bounce around against thematically appropriate constraints), <a href="http://www.bloomberg.com/features/2016-benjamin-wey/">a slander feature</a> (in which resampled letterforms get spiky around the mouse and scroll speed), and the <a href="http://www.bloomberg.com/features/2015-bloomberg-book-list/">Bloomberg year-end book list</a>:</p>
+
+  <iframe src="fizzytext9/index.html" scrolling="no"></iframe>
+
+  <p>We played with different techniques of text wrapping and type-on-dynamic-paths for <a href="http://www.bloomberg.com/features/2016-design/">The Design Issue</a>, which might be my favorite thing I’ve done. There remains a lot of work to do. See <a href="http://bl.ocks.org/tophtucker">my bl.ocks</a> for more and ongoing.</p>
+
+  <p>—Toph</p>
+
 </body>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>

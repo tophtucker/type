@@ -1,0 +1,1 @@
+For devices with accelerometers

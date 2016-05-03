@@ -1,0 +1,1 @@
+From A. N. Whitehead, [_An Introduction to Mathematics_](https://archive.org/details/anintroductiont01whitgoog), 1911. Layout partially inspired by [this](http://hakunamatata.house/contents/prologue).

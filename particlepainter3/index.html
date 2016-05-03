@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+
+<title>Particle Painter</title>
+
+<script src='d3.min.js'></script>
+<script src='improvedNoise.js'></script>
+<script src='main.js'></script>
+
+<script>
+  window.onload = function() {
+    var imgSrcs = [
+      'seurat.jpg',
+      'luce.jpg',
+      'matisse.jpg',
+      'schmitt.jpg',
+      'picasso.jpg',
+      'lemmen.jpg'
+    ];
+    var particlePainter = new ParticlePainter(imgSrcs, d3.select("#starry").node());
+  };
+</script>
+
+</head>
+
+<body>
+
+<div id='starry'></div>
+
+</body>
+</html>

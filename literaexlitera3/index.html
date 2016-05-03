@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.container {
+  width: 562px;
+  margin: auto;
+  position: relative;
+}
+
+.text {
+  padding: 1em;
+}
+
+.text p {
+  margin: 0;
+  text-indent: 1em;
+}
+
+.text p span {
+  text-indent: 0;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
+</style>
+
+<title>Letter flow</title>
+
+<script src='d3.min.js'></script>
+<script src='d3-jetpack.js'></script>
+<script src='improvedNoise.js'></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="text">
+
+<!-- <p>“Thank you, Katie – and thank you to President Faust, the Fellows of Harvard College, the Board of Overseers, and all the faculty, alumni, and students who have welcomed me back to campus.</p>
+<p>“I’m excited to be here, not only to address the distinguished graduates and alumni at Harvard University’s 363rd commencement but to stand in the exact spot where Oprah stood last year. OMG.</p>
+<p>“Let me begin with the most important order of business: Let’s have a big round of applause for the Class of 2014! They’ve earned it!</p>
+<p>“As excited as the graduates are, they are probably even more exhausted after the past few weeks. And parents: I’m not referring to their final exams. I’m talking about the Senior Olympics, the Last Chance Dance, and the Booze Cruise – I mean, the moonlight cruise.</p>
+<p>“The entire year has been exciting on campus: Harvard beat Yale for the seventh straight time in football. The men’s basketball team went to the second round of the NCAA tournament for the second straight year. And the Men’s Squash team won national championship.</p>
+<p>“Who’d a thunk it: Harvard, an athletic powerhouse! Pretty soon they’ll be asking whether you have academics to go along with your athletic programs.</p>
+<p>“My personal connection to Harvard began in 1964, when I graduated from Johns Hopkins University in Baltimore and matriculated here at the B-School.</p>
+<p>“You’re probably asking: How did I ever get into Harvard Business School, given my stellar academic record, where I always made the top half of the class possible? I have no idea. And the only people more surprised than me were my professors.</p>
+<p>“Anyway, here I am again back in Cambridge. And I have noticed that a few things have changed since I was a student here. Elsie’s – a sandwich spot I used to love near the Square – is now a burrito shop. The Wursthaus – which had great beer and sausage – is now an artisanal gastro-pub, whatever the heck that is. And the old Holyoke Center is now named the Smith Campus Center.</p>
+<p>“Don’t you just hate it when alumni put their names all over everything? I was thinking about that this morning as I walked into the Bloomberg Center on the Harvard Business School campus across the river.</p>
+<p>“But the good news is, Harvard remains what it was when I first arrived on campus 50 years ago: America’s most prestigious university. And, like other great universities, it lies at the heart of the American experiment in democracy.</p>
+<p>“Their purpose is not only to advance knowledge, but to advance the ideals of our nation. Great universities are places where people of all backgrounds, holding all beliefs, pursuing all questions, can come to study and debate their ideas – freely and openly.</p> -->
+<p>“Today, I’d like to talk with you about how important it is for that freedom to exist for everyone, no matter how strongly we may disagree with another’s viewpoint.</p>
+<p>“Tolerance for other people’s ideas, and the freedom to express your own, are inseparable values at great universities. Joined together, they form a sacred trust that holds the basis of our democratic society.</p>
+<p>“But that trust is perpetually vulnerable to the tyrannical tendencies of monarchs, mobs, and majorities. And lately, we have seen those tendencies manifest themselves too often, both on college campuses and in our society.</p>
+<p>“That’s the bad news – and unfortunately, I think both Harvard, and my own city of New York, have been witnesses to this trend.</p>
+<p>“First, for New York City. Several years ago, as you may remember, some people tried to stop the development of a mosque a few blocks from the World Trade Center site.</p>
+<p>“It was an emotional issue, and polls showed that two-thirds of Americans were against a mosque being built there. Even the Anti-Defamation League – widely regarded as the country’s most ardent defender of religious freedom – declared its opposition to the project.</p>
+<p>“The opponents held rallies and demonstrations. They denounced the developers. And they demanded that city government stop its construction. That was their right – and we protected their right to protest. But they could not have been more wrong. And we refused to cave in to their demands.</p>
+<p>“The idea that government would single out a particular religion, and block its believers – and only its believers – from building a house of worship in a particular area is diametrically opposed to the moral principles that gave rise to our great nation and the constitutional protections that have sustained it.</p>
+<p>“Our union of 50 states rests on the union of two values: freedom and tolerance. And it is that union of values that the terrorists who attacked us on September 11th, 2001 – and on April 15th, 2013 – found most threatening.</p>
+<p>“To them, we were a God-less country.</p>
+<p>“But in fact, there is no country that protects the core of every faith and philosophy known to human kind – free will – more than the United States of America. That protection, however, rests upon our constant vigilance.</p>
+<p>“We like to think that the principle of separation of church and state is settled. It is not. And it never will be. It is up to us to guard it fiercely – and to ensure that equality under the law means equality under the law for everyone.</p>
+<p>“If you want the freedom to worship as you wish, to speak as you wish, and to marry whom you wish, you must tolerate my freedom to do so – or not do so – as well.</p>
+<p>“What I do may offend you. You may find my actions immoral or unjust. But attempting to restrict my freedoms – in ways that you would not restrict your own – leads only to injustice.</p>
+<p>“We cannot deny others the rights and privileges that we demand for ourselves. And that is true in cities – and it is no less true at universities, where the forces of repression appear to be stronger now than they have been since the 1950s.</p>
+<!-- <p>“When I was growing up, U.S. Senator Joe McCarthy was asking: ‘Are you now or have you ever been?’ He was attempting to repress and criminalize those who sympathized with an economic system that was, even then, failing.</p>
+<p>“McCarthy’s Red Scare destroyed thousands of lives, but what was he so afraid of? An idea – in this case, communism – that he and others deemed dangerous.</p>
+<p>“But he was right about one thing: Ideas can be dangerous. They can change society. They can upend traditions. They can start revolutions. That’s why throughout history, those in authority have tried to repress ideas that threaten their power, their religion, their ideology, or their reelection chances.</p>
+<p>“That was true for Socrates and Galileo, it was true for Nelson Mandela and Václav Havel, and it has been true for Ai Wei Wei, Pussy Riot, and the kids who made the ‘Happy’ video in Iran.</p>
+<p>“Repressing free expression is a natural human weakness, and it is up to us to fight it at every turn. Intolerance of ideas – whether liberal or conservative – is antithetical to individual rights and free societies, and it is no less antithetical to great universities and first-rate scholarship.</p>
+<p>“There is an idea floating around college campuses – including here at Harvard – that scholars should be funded only if their work conforms to a particular view of justice. There’s a word for that idea: censorship. And it is just a modern-day form of McCarthyism.</p>
+<p>“Think about the irony: In the 1950s, the right wing was attempting to repress left wing ideas. Today, on many college campuses, it is liberals trying to repress conservative ideas, even as conservative faculty members are at risk of becoming an endangered species. And perhaps nowhere is that more true than here in the Ivy League.</p>
+<p>“In the 2012 presidential race, according to Federal Election Commission data, 96 percent of all campaign contributions from Ivy League faculty and employees went to Barack Obama.</p>
+<p>“Ninety-six percent. There was more disagreement among the old Soviet Politburo than there is among Ivy League donors.</p>
+<p>“That statistic should give us pause – and I say that as someone who endorsed President Obama for reelection – because let me tell you, neither party has a monopoly on truth or God on its side.</p>
+<p>“When 96 percent of Ivy League donors prefer one candidate to another, you have to wonder whether students are being exposed to the diversity of views that a great university should offer.</p>
+<p>“Diversity of gender, ethnicity, and orientation is important. But a university cannot be great if its faculty is politically homogenous. In fact, the whole purpose of granting tenure to professors is to ensure that they feel free to conduct research on ideas that run afoul of university politics and societal norms.</p>
+<p>“When tenure was created, it mostly protected liberals whose ideas ran up against conservative norms.</p>
+<p>“Today, if tenure is going to continue to exist, it must also protect conservatives whose ideas run up against liberal norms. Otherwise, university research – and the professors who conduct it – will lose credibility.</p>
+<p>“Great universities must not become predictably partisan. And a liberal arts education must not be an education in the art of liberalism.</p>
+<p>“The role of universities is not to promote an ideology. It is to provide scholars and students with a neutral forum for researching and debating issues – without tipping the scales in one direction, or repressing unpopular views.</p>
+<p>“Requiring scholars – and commencement speakers, for that matter – to conform to certain political standards undermines the whole purpose of a university.</p>
+<p>“This spring, it has been disturbing to see a number of college commencement speakers withdraw – or have their invitations rescinded – after protests from students and – to me, shockingly – from senior faculty and administrators who should know better.</p>
+<p>“It happened at Brandeis, Haverford, Rutgers, and Smith. Last year, it happened at Swarthmore and Johns Hopkins, I’m sorry to say.</p>
+<p>“In each case, liberals silenced a voice – and denied an honorary degree – to individuals they deemed politically objectionable. That is an outrage and we must not let it continue.</p>
+<p>“If a university thinks twice before inviting a commencement speaker because of his or her politics censorship and conformity – the mortal enemies of freedom – win out.</p>
+<p>“And sadly, it is not just commencement season when speakers are censored.</p>
+<p>“Last fall, when I was still in City Hall, our Police Commissioner was invited to deliver a lecture at another Ivy League institution – but he was unable to do so because students shouted him down.</p>
+<p>“Isn’t the purpose of a university to stir discussion, not silence it? What were the students afraid of hearing? Why did administrators not step in to prevent the mob from silencing speech? And did anyone consider that it is morally and pedagogically wrong to deprive other students the chance to hear the speech?</p>
+<p>“I’m sure all of today’s graduates have read John Stuart Mill’s On Liberty. But allow me to read a short passage from it: ‘The peculiar evil of silencing the expression of an opinion is, that it is robbing the human race; posterity as well as the existing generation; those who dissent from the opinion, still more than those who hold it.’</p>
+<p>“He continued: ‘If the opinion is right, they are deprived of the opportunity of exchanging error for truth: if wrong, they lose, what is almost as great a benefit, the clearer perception and livelier impression of truth, produced by its collision with error.’</p>
+<p>“Mill would have been horrified to learn of university students silencing the opinions of others. He would have been even more horrified that faculty members were often part of the commencement censorship campaigns.</p>
+<p>“For tenured faculty members to silence speakers whose views they disagree with is the height of hypocrisy, especially when these protests happen in the northeast – a bastion of self-professed liberal tolerance.</p>
+<p>“I’m glad to say, however, that Harvard has not caved in to these commencement censorship campaigns. If it had, Colorado State Senator Michael Johnston would not have had the chance to address the Education School yesterday.</p>
+<p>“Some students called on the administration to rescind the invitation to Johnston because they opposed some of his education policies. But to their great credit, President Faust and Dean Ryan stood firm.</p>
+<p>“As Dean Ryan wrote to students: ‘I have encountered many people of good faith who share my basic goals but disagree with my own views when it comes to the question of how best to improve education. In my view, those differences should be explored, debated, challenged, and questioned. But they should also be respected and, indeed, celebrated.’</p>
+<p>“He could not have been more correct, and he could not have provided a more valuable final lesson to the class of 2014.</p>
+<p>“As a former chairman of Johns Hopkins, I strongly believe that a university’s obligation is not to teach students what to think but to teach students how to think. And that requires listening to the other side, weighing arguments without prejudging them, and determining whether the other side might actually make some fair points.</p>
+<p>“If the faculty fails to do this, then it is the responsibility of the administration and governing body to step in and make it a priority. If they do not, if students graduate with ears and minds closed, the university has failed both the student and society.</p>
+<p>“And if you want to know where that leads, look no further than Washington, D.C.</p>
+<p>“Down in Washington, every major question facing our country – involving our security, our economy, our environment, and our health – is decided.</p>
+<p>“Yet the two parties decide these questions not by engaging with one another, but by trying to shout each other down, and by trying to repress and undermine research that runs counter to their ideology. The more our universities emulate that model, the worse off we will be as a society.</p>
+<p>“And let me give you an example: For decades, Congress has barred the Centers for Disease Control from conducting studies of gun violence, and recently Congress also placed that prohibition on the National Institute of Health. You have to ask yourself: What are they afraid of?</p>
+<p>“This year, the Senate has delayed a vote on President Obama’s nominee for Surgeon General – Dr. Vivek Murthy, a Harvard physician – because he had the audacity to say that gun violence is a public health crisis that should be tackled. The gall of him!</p>
+<p>“Let’s get serious: When 86 Americans are killed with guns every single day, and shootings regularly occur at our schools and universities – including last week’s tragedy at Santa Barbara – it would be almost medical malpractice to say anything else.</p>
+<p>“But in politics – as it is on too many college campuses – people don’t listen to facts that run counter to their ideology. They fear them. And nothing is more frightening to them than scientific evidence.</p>
+<p>“Earlier this year, the State of South Carolina adopted new science standards for its public schools – but the state legislature blocked any mention of natural selection. That’s like teaching economics – without mentioning supply and demand.</p>
+<p>“Again, you have to ask: What are they afraid of?</p>
+<p>“The answer, of course, is obvious: Just as members of Congress fear data that undermines their ideological beliefs, these state legislators fear scientific evidence that undermines their religious beliefs.</p>
+<p>“And if you want proof of that, consider this: An 8-year old girl in South Carolina wrote to members of the state legislature urging them to make the Woolly Mammoth the official state fossil. The legislators thought it was a great idea, because a Woolly Mammoth fossil was found in the state way back in 1725. But the state senate passed a bill defining the Woolly Mammoth as having been ‘created on the 6th day with the beasts of the field.’</p>
+<p>“You can’t make this stuff up.</p>
+<p>“Here in 21st century America, the wall between church and state remains under attack – and it’s up to all of us to man the barricades.</p>
+<p>“Unfortunately, the same elected officials who put ideology and religion over data and science when it comes to guns and evolution are often the most unwilling to accept the scientific data on climate change.</p>
+<p>“Now, don’t get me wrong: scientific skepticism is healthy. But there is a world of difference between scientific skepticism that seeks out more evidence and ideological stubbornness that shuts it out.</p>
+<p>“Given the general attitude of many elected officials toward science it’s no wonder that the federal government has abdicated its responsibility to invest in scientific research, much of which occurs at our universities.</p>
+<p>“Today, federal spending on research and development as a percentage of GDP is lower than it has been in more than 50 years which is allowing the rest of the world to catch up – and even surpass – the U.S. in scientific research.</p>
+<p>“The federal government is flunking science, just as many state governments are.</p>
+<p>“We must not become a country that turns our back on science, or on each other. And you graduates must help lead the way.</p>
+<p>“On every issue, we must follow the evidence where it leads and listen to people where they are. If we do that, there is no problem we cannot solve. No gridlock we cannot break. No compromise we cannot broker.</p>
+<p>“The more we embrace a free exchange of ideas, and the more we accept that political diversity is healthy, the stronger our society will be.</p>
+<p>“Now, I know this has not been a traditional commencement speech, and it may keep me from passing a dissertation defense in the humanities department, but there is no easy time to say hard things.</p>
+<p>“Graduates: Throughout your lives, do not be afraid of saying what you believe is right, no matter how unpopular it may be, especially when it comes to defending the rights of others.</p>
+<p>“Standing up for the rights of others is in some ways even more important than standing up for your own rights. Because when people seek to repress freedom for some, and you remain silent, you are complicit in that repression and you may well become its victim.</p>
+<p>“Do not be complicit, and do not follow the crowd. Speak up, and fight back.</p>
+<p>“You will take your lumps, I can assure you of that. You will lose some friends and make some enemies. But the arc of history will be on your side, and our nation will be stronger for it.</p>
+<p>“Now, all of you graduates have earned today’s celebration, and you have a lot to be proud of and a lot to be grateful for. So tonight, as you leave this great university behind, have one last Scorpion Bowl at the Kong – on second thought, don’t – and tomorrow, get to work making our country and our world freer than ever, for everyone.</p>
+<p>“Good luck and God bless.”</p> -->
+
+</div>
+
+</div>
+
+</div>
+
+<script src='fizzy.js'></script>
+<script src='main.js'></script>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+
+  @font-face {
+      font-family: 'Curlz SD';
+      src: url('CurlzSD.eot');
+      src: url('CurlzSD.eot?#iefix') format('embedded-opentype'),
+          url('CurlzSD.woff') format('woff'),
+          url('CurlzSD.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    font-family: 'Curlz SD';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+  }
+</style>
+
+<title>StreakyText</title>
+
+<script src='d3.min.js'></script>
+<script src='main.js'></script>
+
+<script>
+  window.onload = function() {
+
+    // delayed to allow webfont to load :/
+    setTimeout(function() {
+      var streakyText = new StreakyText('BUSINESS!');    
+    }, 100);
+
+  };
+</script>
+
+</head>
+
+<body>
+
+<h1>Font by Steph</h1>
+
+<div id='streakytext'></div>
+
+</body>
+</html>

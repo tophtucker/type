@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+
+<title>StreakyText</title>
+
+<script src='d3.min.js'></script>
+<script src='improvedNoise.js'></script>
+<script src='main.js'></script>
+
+<script>
+  window.onload = function() {
+    var streakyText = new StreakyText(['Simon','Andrew','James','John','Philip','Bartholomew','Thomas','Matthew','James','Thaddaeus','Simon','Judas']);
+    // var streakyText = new StreakyText(['Toph','Tracy','Alex','Alis','Adam','Jaci','Steph','Braulio']);
+    // var streakyText = new StreakyText(['H','He','Hel','Hell','Hello','w','wo','wor','worl','world','world!']);
+    // var streakyText = new StreakyText(['A','B','C']);
+  };
+</script>
+
+</head>
+
+<body>
+
+<div id='streakytext'></div>
+
+</body>
+</html>

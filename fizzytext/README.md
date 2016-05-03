@@ -1,0 +1,1 @@
+TOTALLY SUPER DUPER NOT MY WORK! Extracted from the dat.GUI docs, where it's buried on the [gh-pages branch](https://github.com/dataarts/dat.gui/blob/gh-pages/docs/demo.js). The only change I made was removing the dat.GUI dependency by adding the constrain function from dat.GUI. Appears to have been written by George Michael Brower.

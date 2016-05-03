@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+
+#streakytext {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #streakytext span {
+    position: absolute;
+  }
+</style>
+
+<title>StreakyText</title>
+
+<script src='d3.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+<script src='improvedNoise.js'></script>
+<script src='main.js?v=1'></script>
+
+</head>
+
+<body>
+
+<div id='streakytext'></div>
+
+<script>
+// titles = d3.selectAll(".book-title")[0].map(function(d) { return d.innerText; });
+var titles = ["Rise of the Robots", "The Buried Giant", "Swimming With Sharks: My Journey Into the World of the Bankers", "Other People’s Money: The Real Business of Finance", "In This Together", "What Do You Do With an Idea?", "History's People: Personalities and the Past", "The Silk Roads", "How Music Works", "Superforecasting: The Art and Science of Prediction", "Ghost Fleet", "The New Tsar: The Rise and Reign of Vladimir Putin", "The Silk Road: A New History", "A World Lit Only by Fire", "The Courage to Act", "The Witches: Salem, 1692", "A Beautiful Question: Finding Nature’s Deep Design", "The Courage to Act", "Economics Rules", "Between Debt and the Devil", "Dreamland: The True Tale of America’s Opiate Epidemic", "Call Me Debbie: True Confessions of a Down-to-Earth Diva", "Scarcity", "Why Did Europe Conquer the World?", "Barbarian Days: A Surfing Life", "Unfinished Business", "Rise of the Robots: Technology and the Threat of a Jobless Future", "The Conservative Heart", "The Shape of the New: Four Big Ideas and How They Made the Modern World", "The Tsar of Love and Techno: Stories", "Between the World and Me", "Shadow Cold War: The Sino-Soviet Competition for the Third World", "The Buried Giant", "The Cost of Courage", "The Limits of Partnership: U.S.-Russian Relations in the Twenty-First Century", "Dealing with China: An Insider Unmasks the New Economic Superpower", "The Wright Brothers", "Kerouac: A Biography", "Give and Take", "Hiroshima Nagasaki: The Real Story of the Atomic Bombings and Their Aftermath", "No Ordinary Disruption", "This Changes Everything", "An Officer and a Spy", "Ataturk", "HHhH", "The Maisky Diaries", "The Courage to Act", "A Little Life: A Novel", "Superforecasting: The Art and Science of Prediction", "The Power of Being Yourself", "Primates of Park Avenue", "How Google Works", "Being Mortal", "The Courage to Act", "Lords of Finance", "Immortal: The Approved Biography of George Best", "Lancet Infectious Diseases", "Superforecasting: The Art and Science of Prediction", "The Century Trilogy (Fall of Giants, Winter of the World, Edge of Eternity)", "American Icon", "Political Order and Political Decay: From the Industrial Revolution to the Globalization of Democracy", "Just Mercy", "The Road to Character", "Skyfaring: A Journey With a Pilot", "Napoleon: A Life", "Collapse and Revival: Understanding Global Recessions and Recoveries", "Just Mercy", "Universal Man: The Lives of John Maynard Keynes", "Dead Wake", "The Girl on the Train", "Do No Harm", "The Wandering Falcon", "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future", "Sapiens: A Brief History of Humankind", "Submission", "The Courage to Act", "End of Discussion", "Memories of a Marriage", "The Courage to Act"];
+titles = _.shuffle(titles);
+var streakyText = new StreakyText(document.getElementById('streakytext'), titles);
+</script>
+
+</body>
+</html>

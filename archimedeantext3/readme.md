@@ -1,0 +1,1 @@
+From James Joyce, “The Dead”
